@@ -446,6 +446,30 @@ param! {
 }
 
 param! {
+    enum LeHostFeature {
+        ConnSubrating = 38,
+        AdvCodingSelection = 41,
+        ChannelSounding = 47,
+    }
+}
+
+param! {
+    enum LeHostFeatureV2 {
+        ConnSubrating = 38,
+        AdvCodingSelection = 41,
+        ChannelSounding = 47,
+        ShorterConnectionIntervals = 73,
+    }
+}
+
+param! {
+    enum BitValue {
+        Clear = 0,
+        Set = 1,
+    }
+}
+
+param! {
     bitfield LeDataRelatedAddrChangeReasons[1] {
         (0, change_on_adv_data_change, set_change_addr_on_adv_data_changes);
         (1, change_on_scan_response_data_change, set_change_addr_on_scan_response_data_changes);
